@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class LeviCamera : MonoBehaviour
 {
@@ -13,6 +14,12 @@ public class LeviCamera : MonoBehaviour
     float cameraHeight, cameraDepth;
     [SerializeField]
     SuperCharacterController controller;
+
+    [SerializeField]
+    TextMeshProUGUI tmp;
+
+    [SerializeField]
+    int playerHP = 100;
 
     float camX, camY, camZ;
 
@@ -37,6 +44,7 @@ public class LeviCamera : MonoBehaviour
         mainCamera.transform.localPosition = new Vector3 
         (camX, camY, camZ);
 
+        tmp.text = "Health: " + playerHP.ToString();
         
     }
 }
