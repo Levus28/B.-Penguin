@@ -29,12 +29,14 @@ public class PlayerInputController : MonoBehaviour {
         // mouseInput.y = rightStickInput.y != 0 ? rightStickInput.y * RightStickMultiplier.y : mouseInput.y;
 
         bool jumpInput = Input.GetButtonDown("Jump");
+        bool runInput = Input.GetKey(KeyCode.LeftShift);
 
         Current = new PlayerInput()
         {
             MoveInput = moveInput,
             //MouseInput = mouseInput,
-            JumpInput = jumpInput
+            JumpInput = jumpInput,
+            RunInput = runInput
         };
 	}
 }
@@ -44,4 +46,5 @@ public struct PlayerInput
     public Vector3 MoveInput;
     public Vector2 MouseInput;
     public bool JumpInput;
+    public bool RunInput;
 }

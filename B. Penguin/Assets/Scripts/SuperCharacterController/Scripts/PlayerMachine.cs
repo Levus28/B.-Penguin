@@ -10,15 +10,17 @@ public class PlayerMachine : SuperStateMachine {
 
     public Transform AnimatedMesh;
 
-    public float WalkSpeed = 20.0f;
+    public float WalkSpeed = 8.0f;
+    public float RunSpeed = 12.0f;
     public float WalkAcceleration = 500.0f;
     public float JumpAcceleration = 5.0f;
     public float JumpHeight = 3.0f;
     public float Gravity = 25.0f;
     public float walkingFriction = 500.0f;
+    float targetSpeed {get{return input.Current.RunInput ? RunSpeed : WalkSpeed;}}
 
     // Add more states by comma separating them
-    enum PlayerStates { Idle, Walk, Jump, Fall }
+    enum PlayerStates { Idle, Walk, Jump, Fall, Run }
 
     private SuperCharacterController controller;
 
@@ -171,7 +173,9 @@ public class PlayerMachine : SuperStateMachine {
 
         if (input.Current.MoveInput != Vector3.zero)
         {
-            moveDirection = Vector3.MoveTowards(moveDirection, LocalMovement() * WalkSpeed, WalkAcceleration * controller.deltaTime);
+            
+
+            moveDirection = Vector3.MoveTowards(moveDirection, LocalMovement() * targetSpeed, WalkAcceleration * controller.deltaTime);
         }
         else
         {
@@ -200,7 +204,7 @@ public class PlayerMachine : SuperStateMachine {
             return;            
         }
 
-        planarMoveDirection = Vector3.MoveTowards(planarMoveDirection, LocalMovement() * WalkSpeed, JumpAcceleration * controller.deltaTime);
+        planarMoveDirection = Vector3.MoveTowards(planarMoveDirection, LocalMovement() * targetSpeed, JumpAcceleration * controller.deltaTime);
         verticalMoveDirection -= controller.up * Gravity * controller.deltaTime;
 
         moveDirection = planarMoveDirection + verticalMoveDirection;
