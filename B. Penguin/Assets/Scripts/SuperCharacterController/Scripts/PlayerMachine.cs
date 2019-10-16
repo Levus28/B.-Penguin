@@ -10,11 +10,12 @@ public class PlayerMachine : SuperStateMachine {
 
     public Transform AnimatedMesh;
 
-    public float WalkSpeed = 4.0f;
-    public float WalkAcceleration = 30.0f;
+    public float WalkSpeed = 20.0f;
+    public float WalkAcceleration = 500.0f;
     public float JumpAcceleration = 5.0f;
     public float JumpHeight = 3.0f;
     public float Gravity = 25.0f;
+    public float walkingFriction = 500.0f;
 
     // Add more states by comma separating them
     enum PlayerStates { Idle, Walk, Jump, Fall }
@@ -146,7 +147,7 @@ public class PlayerMachine : SuperStateMachine {
         }
 
         // Apply friction to slow us to a halt
-        moveDirection = Vector3.MoveTowards(moveDirection, Vector3.zero, 10.0f * controller.deltaTime);
+        moveDirection = Vector3.MoveTowards(moveDirection, Vector3.zero, walkingFriction * controller.deltaTime);
     }
 
     void Idle_ExitState()
