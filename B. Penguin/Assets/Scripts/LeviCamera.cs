@@ -11,7 +11,7 @@ public class LeviCamera : MonoBehaviour
     [SerializeField]
     GameObject character;
     [SerializeField]
-    float cameraHeight, cameraDepth;
+    public float cameraHeight, cameraDepth;
     [SerializeField]
     SuperCharacterController controller;
 
@@ -21,7 +21,10 @@ public class LeviCamera : MonoBehaviour
     [SerializeField]
     int playerHP = 100;
 
-    float camX, camY, camZ;
+    public float camX, camY, camZ;
+
+    [SerializeField]
+    public bool followX, followZ;
 
     // Start is called before the first frame update
     void Start()
@@ -33,13 +36,17 @@ public class LeviCamera : MonoBehaviour
     {
         //mainCamera.transform.localPosition = new Vector3(character.transform.localPosition.x, cameraHeight, cameraDepth);
 
-        camX = character.transform.localPosition.x;
+        if (followX == true){camX = character.transform.localPosition.x;}
+        if (followZ == true){camZ = character.transform.localPosition.z + cameraDepth;}
+        else{camZ = cameraDepth;}
+
+
         if (controller.currentGround.IsGrounded(true, 0.1f))
         {
             camY = Mathf.MoveTowards (mainCamera.transform.localPosition.y, character.transform.localPosition.y + cameraHeight, 0.5f);
             
         }
-        camZ = cameraDepth;
+        
 
         mainCamera.transform.localPosition = new Vector3 
         (camX, camY, camZ);

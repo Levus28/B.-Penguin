@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.AI;
 
 /*
  * Example implementation of the SuperStateMachine and SuperCharacterController
@@ -20,9 +21,10 @@ public class PlayerMachine : SuperStateMachine {
     float targetSpeed {get{return input.Current.RunInput ? RunSpeed : WalkSpeed;}}
 
     // Add more states by comma separating them
-    enum PlayerStates { Idle, Walk, Jump, Fall, Run }
+    public enum PlayerStates { Idle, Walk, Jump, Fall, Run, OpenDoor }
 
     private SuperCharacterController controller;
+    public NavMeshAgent agent;
 
     // current velocity
     private Vector3 moveDirection;
@@ -44,6 +46,9 @@ public class PlayerMachine : SuperStateMachine {
 
         // Set our currentState to idle on startup
         currentState = PlayerStates.Idle;
+
+        agent = GetComponent<NavMeshAgent>();
+        agent.enabled = false;
 	}
 
     protected override void EarlyGlobalSuperUpdate()
@@ -228,5 +233,48 @@ public class PlayerMachine : SuperStateMachine {
         }
 
         moveDirection -= controller.up * Gravity * controller.deltaTime;
+    }
+
+    //@LEVI: The following is for the opening of a door
+
+    public Vector3 setPoint1, setPoint2;
+    bool hasFinished; 
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        door door = collider.gameObject.GetComponent<door>();
+        if (door != null)
+        {
+            setPoint1 = door.point1.transform.position;
+            setPoint2 = door.point2.transform.position;
+        }
+    }    
+
+    void OpenDoor_EnterState()
+    {
+        agent.enabled = true;
+        hasFinished = false;
+        //if (agent.enabled == true)
+        //{FindNearestPoint();}
+    }       
+
+    void OpenDoor_SuperUpdate()
+    {
+        
+
+        if (hasFinished == false){
+        agent.SetDestination(setPoint1);}
+
+        if(agent.remainingDistance < 0.2f){
+            agent.SetDestination(setPoint2);
+            hasFinished = true;
+            if (agent.remainingDistance < 0.1f){
+                
+                agent.enabled = false;
+                currentState = PlayerStates.Idle;
+                return;
+            }
+        }
+        
     }
 }
