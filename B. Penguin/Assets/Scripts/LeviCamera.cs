@@ -51,7 +51,7 @@ public class LeviCamera : MonoBehaviour
         mainCamera.transform.localPosition = new Vector3 
         (camX, camY, camZ);
 
-        tmp.text = "Health: " + playerHP.ToString();
+        //tmp.text = "Health: " + playerHP.ToString();
         
     }
 }
