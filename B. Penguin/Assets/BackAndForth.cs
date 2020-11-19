@@ -7,7 +7,7 @@ public class BackAndForth : MonoBehaviour
 	public bool randomizeAmplitude;    
     public Vector3 amplitude = Vector3.zero;
 	public Vector3 minAmplitude, _maxAmplitude;    
-	public bool _randomizeFrequency;    
+	public bool randomizeFrequency;    
 	public Vector3 frequency = Vector3.one;    
 	public Vector3 minFrequency, _maxFrequency;
 
@@ -38,7 +38,7 @@ public class BackAndForth : MonoBehaviour
 				Random.Range(minAmplitude.z, _maxAmplitude.z));
 		}
 
-		if (_randomizeFrequency)
+		if (randomizeFrequency)
 		{
 			frequency = new Vector3(
 				Random.Range(minFrequency.x, _maxFrequency.x),
