@@ -5,17 +5,29 @@
         _MainTex1 ("ChibitechSet1", 2D) = "white" {}
         _MainTex2 ("ChibitechSet2", 2D) = "white" {}
         _MainTex3 ("ChibitechSet3", 2D) = "white" {}
+        //_MainTex4 ("ChibitechSet4", 2D) = "white" {}
+        //_MainTex5 ("ChibitechSet5", 2D) = "white" {}
+        //_MainTex6 ("ChibitechSet6", 2D) = "white" {}
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _Metallic ("Metallic", Range(0,1)) = 0.0
         _Speed1 ("Speed1", float) = 1.0
-        _Scale1 ("Scale1", float) = 1.0        
+        _Scale1 ("Scale1", float) = 1.0
         _Speed2 ("Speed2", float) = 1.0
         _Scale2 ("Scale2", float) = 1.0        
         _Speed3 ("Speed3", float) = 1.0
         _Scale3 ("Scale3", float) = 1.0
+        //_Speed4 ("Speed4", float) = 1.0
+        //_Scale4 ("Scale4", float) = 1.0
+        //_Speed5 ("Speed5", float) = 1.0
+        //_Scale5 ("Scale5", float) = 1.0
+        //_Speed6 ("Speed6", float) = 1.0
+        //_Scale6 ("Scale6", float) = 1.0        
         _Octave1 ("Octave1", Range(0,1)) = 0.0
         _Octave2 ("Octave2", Range(0,1)) = 0.0
         _Octave3 ("Octave3", Range(0,1)) = 0.0
+        //_Octave4 ("Octave4", Range(0,1)) = 0.0
+        //_Octave5 ("Octave5", Range(0,1)) = 0.0
+        //_Octave6 ("Octave6", Range(0,1)) = 0.0
     }
     SubShader
     {
@@ -94,6 +106,9 @@
         sampler2D _MainTex1;
         sampler2D _MainTex2;
         sampler2D _MainTex3;
+        /*sampler2D _MainTex4;
+        sampler2D _MainTex5;
+        sampler2D _MainTex6;*/
 
         struct Input
         {
@@ -107,12 +122,21 @@
         float _Speed1;
         float _Speed2;
         float _Speed3;
+        /*float _Speed4;
+        float _Speed5;
+        float _Speed6;*/
         float _Scale1;
         float _Scale2;
         float _Scale3;
+        /*float _Scale4;
+        float _Scale5;
+        float _Scale6;*/
         float _Octave1;
         float _Octave2;
         float _Octave3;
+        /*float _Octave4;
+        float _Octave5;
+        float _Octave6;*/
 
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
         // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
@@ -125,8 +149,12 @@
         {
             float noise1 = Noise3D(IN.worldPos * _Scale1 + _Time.y * _Speed1);
             float noise2 = Noise3D(IN.worldPos * _Scale2 + _Time.y * _Speed2);
-            float noise3 = Noise3D(IN.worldPos * _Scale3 + _Time.y * _Speed3);       
+            float noise3 = Noise3D(IN.worldPos * _Scale3 + _Time.y * _Speed3);
+            //float noise4 = Noise3D(IN.worldPos * _Scale4 + _Time.y * _Speed4);
+            //float noise5 = Noise3D(IN.worldPos * _Scale5 + _Time.y * _Speed5);
+            //float noise6 = Noise3D(IN.worldPos * _Scale6 + _Time.y * _Speed6);
             float combinednoise = noise1 * _Octave1 + noise2 * _Octave2 + noise3 * _Octave3;
+            //float combinednoise = noise1 * _Octave1 + noise2 * _Octave2 + noise3 * _Octave3 + noise4 * _Octave4 + noise5 * _Octave5 + noise6 * _Octave6;
             o.Albedo = tex2D(_MainTex1, float2(combinednoise, 0));
             //o.Albedo = combinednoise < 0.5 ? 0:1;
             // Metallic and smoothness come from slider variables
