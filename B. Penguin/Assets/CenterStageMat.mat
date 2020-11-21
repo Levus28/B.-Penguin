@@ -48,7 +48,7 @@ Material:
     - _HeartMax: 0.5
     - _HeartMin: 0.3
     - _HeartSlider: 0
-    - _HeartSpeed: 1
+    - _HeartSpeed: 2
     - _HueShift: 1
     - _Metallic: 0
     - _Octave1: 0.24
