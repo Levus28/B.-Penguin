@@ -3,7 +3,167 @@ guid: 488d4fad8fbabf94ca0dff32b0952447
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh10_PAT_PEND__MADE_I_1_1_ModelMat
+    second: {fileID: 2100000, guid: 68a769e6913627f48b413e3a82ae3d46, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh11_PAT_PEND__MADE_I_1_1_ModelMat
+    second: {fileID: 2100000, guid: 97d369c1310d63940bfcced178645265, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh12_PAT_PEND__MADE_I_1_1_ModelMat
+    second: {fileID: 2100000, guid: 7016ea47f18d6d9409809e6985ca6e2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh13_PAT_PEND__MADE_I_1_1_ModelMat
+    second: {fileID: 2100000, guid: f7d64b477188e4047bfbba1233446551, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh14_PAT_PEND__MADE_I_1_1_ModelMat
+    second: {fileID: 2100000, guid: b6ef1cc307f411548a15f6fba0331169, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh15_PAT_PEND__MADE_I_1_1_ModelMat
+    second: {fileID: 2100000, guid: 641bda72766b3714a8123b4bafb1c1fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh16_PAT_PEND__MADE_I_1_1_ModelMat
+    second: {fileID: 2100000, guid: c18d8e16e547e1f4fbfaa2c6eb2747f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh17_PAT_PEND__MADE_I_1_1_ModelMat
+    second: {fileID: 2100000, guid: d5ac38ee3e465ac4cabd1768738e8e07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh18_PAT_PEND__MADE_I_1_1_ModelMat
+    second: {fileID: 2100000, guid: 0d08d6bee01cde541abf69fb56567ebe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh19_PAT_PEND__MADE_I_1_1_ModelMat
+    second: {fileID: 2100000, guid: 167605bf0c23ccc458324530b747434c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh1_PAT_PEND__MADE_I_1_1_ModelMat
+    second: {fileID: 2100000, guid: 3e10cec27eaebe54fa69009a9831a4d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh20_PAT_PEND__MADE_I_1_1_ModelMat
+    second: {fileID: 2100000, guid: e787287324d202e449360cc44f2ab271, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh21__1_ModelMat
+    second: {fileID: 2100000, guid: 64d6d62ecb4dca349a4d1dd8a9a8fc42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh22__1_ModelMat
+    second: {fileID: 2100000, guid: b618d3f6c138d9745a8ad5fd5600914b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh23_Nintendo_3_1_ModelMat
+    second: {fileID: 2100000, guid: bb2af061713e74e4a81548c97313ed8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh24_Nintendo_3_1_ModelMat
+    second: {fileID: 2100000, guid: 83dc9d683bf5d0f49a73fc86953a8be6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh25_Nintendo_3_1_ModelMat
+    second: {fileID: 2100000, guid: 03320edfd3345954d93c186602ad918a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh26_Nintendo_3_1_ModelMat
+    second: {fileID: 2100000, guid: 841c92deb8208f941887c1c21b600914, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh27_Nintendo_3_1_ModelMat
+    second: {fileID: 2100000, guid: faf3c379cb0075e4291e0a253d191575, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh28_Nintendo_3_1_ModelMat
+    second: {fileID: 2100000, guid: 6ab68ef75307b774e8678db216c2e21e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh29_Nintendo_3_1_ModelMat
+    second: {fileID: 2100000, guid: 2fe1a78d9d9917848ad0bc8576a56649, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh2_PAT_PEND__MADE_I_1_1_ModelMat
+    second: {fileID: 2100000, guid: ecb8c90ef4bfab741b60cce5cb201c26, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh30_Nintendo_3_1_ModelMat
+    second: {fileID: 2100000, guid: 7e1c571f8a8131c4ba2c10d201e9be0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh31_Nintendo_3_1_ModelMat
+    second: {fileID: 2100000, guid: edfdde9085d657149a47eb7d41dbdb4d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh32_ModelMat
+    second: {fileID: 2100000, guid: 67b36c8816c23ab4082a3404c8a29d39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh3_PAT_PEND__MADE_I_1_1_ModelMat
+    second: {fileID: 2100000, guid: e0e40b24f19c14247876fbe1e3e73790, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh4_PAT_PEND__MADE_I_1_1_ModelMat
+    second: {fileID: 2100000, guid: 41286fbd699fe4348b967fb82b24ac35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh5_PAT_PEND__MADE_I_1_1_ModelMat
+    second: {fileID: 2100000, guid: 93a9b5ea354bbf04d8a5253165f604c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh6_PAT_PEND__MADE_I_1_1_ModelMat
+    second: {fileID: 2100000, guid: 4c2a74e2d2be385429699c56f4d93466, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh7_PAT_PEND__MADE_I_1_1_ModelMat
+    second: {fileID: 2100000, guid: 9fd518e641e957245aa5a13027dbda2b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh8_PAT_PEND__MADE_I_1_1_ModelMat
+    second: {fileID: 2100000, guid: b0ed15d00f3fe334b918048e0ab62a06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh9_PAT_PEND__MADE_I_1_1_ModelMat
+    second: {fileID: 2100000, guid: 19467186507aa854581e07d575687a24, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
